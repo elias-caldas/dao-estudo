@@ -1,6 +1,6 @@
 package application;
 
-import model.Produtos;
+import model.entetities.Produtos;
 
 public class Program {
 

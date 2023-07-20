@@ -12,10 +12,13 @@ public class Produtos implements Serializable {
 	private Double Preço;
 	
 	public Produtos(Integer idProdutos, String tipo, Double preço) {
-		super();
 		this.idProdutos = idProdutos;
 		this.Tipo = tipo;
 		this.Preço = preço;
+	}
+	
+	public Produtos() {
+		
 	}
 
 	public Integer getIdProdutos() {

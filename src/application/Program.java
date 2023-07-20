@@ -10,9 +10,11 @@ public class Program {
 		
 		ProdutosDAO produtosDAO = DaoFactory.createProdutosDao();
 		
-		Produtos novoProduto = new Produtos (null, "Beleza", 50.9);
-		produtosDAO.insert(novoProduto);
-		System.out.println("Inserido! Novo id = " + novoProduto.getIdProdutos());
+		Produtos novoProdutos;
+		novoProdutos = produtosDAO.findById(2);
+		novoProdutos.setTipo("João");
+		produtosDAO.update(novoProdutos);
+		System.out.println("Atualização completa!");
 	}
 
 }

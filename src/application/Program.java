@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Scanner;
+
 import db.DaoFactory;
 import model.dao.ProdutosDAO;
 import model.entetities.Produtos;
@@ -11,10 +13,13 @@ public class Program {
 		ProdutosDAO produtosDAO = DaoFactory.createProdutosDao();
 		
 		Produtos novoProdutos;
-		novoProdutos = produtosDAO.findById(2);
-		novoProdutos.setTipo("João");
-		produtosDAO.update(novoProdutos);
-		System.out.println("Atualização completa!");
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Digite o id que você deseja deletar: ");
+		
+		int id  = scan.nextInt();
+		produtosDAO.deleteById(id);
 	}
 
 }

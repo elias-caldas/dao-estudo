@@ -1,5 +1,7 @@
 package model.dao;
 
+import java.util.List;
+
 import model.entetities.Produtos;
 
 public interface ProdutosDAO {
@@ -11,7 +13,6 @@ public interface ProdutosDAO {
 	void deleteById (Integer id);
 	
 	Produtos findById (Integer id);
-	
 	
 
 }
